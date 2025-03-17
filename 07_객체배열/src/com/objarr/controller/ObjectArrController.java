@@ -1,9 +1,11 @@
 package com.objarr.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import com.objarr.model.vo.Car;
 import com.objarr.model.vo.Food;
+import com.objarr.model.vo.Fruit;
 
 public class ObjectArrController { // 3/14 객체 배열
 
@@ -59,7 +61,14 @@ public class ObjectArrController { // 3/14 객체 배열
 		}
 		System.out.println(result);
 	}
-	
+
+//	 Car 클래스를 선언하고 차종, 색상, km, 이름 배열을 사용해서 데이터를 저장
+//	 대형 검정 300 타호
+//	 중형 흰색 500 GV70
+//   스포츠 노랑 10 카마로
+//	 소형 카키 800 캐스퍼
+//	 대형 파란 600 타요
+//	 입력 받아서 저장하기 / 저장한 값 출력하기
 	public void carObjectArr() {
 		String result = "";
 		Car[] car;
@@ -74,8 +83,118 @@ public class ObjectArrController { // 3/14 객체 배열
 			car[i].setKm(SC.nextInt());
 			System.out.print("이름 입력 : ");
 			car[i].setCarName(SC.next());
-			result += car[i].getCarType() + " " + car[i].getCarColor() +" "+ car[i].getKm()+" " + car[i].getCarName() + " ";
+			result += car[i].getCarType() + " " 
+					+ car[i].getCarColor() + " " 
+					+ car[i].getKm() + " "
+					+ car[i].getCarName() + " ";
 		}
 		System.out.println(result);
+
+		// car[i] = new Car(cartype, name, km, color); 이렇게 사용하는 것보다는 
+		// getter/setter 이용하는 것을 권장함
+		// 왜냐하면 차종 색상 km 이름 순으로 넣어야하는데 위처럼 실수로 잘못 넣을 경우가 발생하기 때문
+		
+		// 객체 배열에서 forEach 문 활용하기
+		// for(자료형 변수명 : 배열)
+		Car[] cars = new Car[5];
+	    cars[0]=new Car("대형","검정",300,"타호");
+	    cars[1]=new Car("중형","흰색",500,"GV70");
+	    cars[2]=new Car("스포츠","노랑",10,"카마로");
+	    cars[3]=new Car("소형","카키",800,"캐스퍼");
+	    cars[4]=new Car("대형","파랑",600,"타요");
+		for(Car c : cars) {
+			System.out.println(c.getCarType() + " " 
+					+ c.getCarColor() + " " 
+					+ c.getKm() + " "
+					+ c.getCarName() + " ");
+		}
+		// forEach으로 값 수정하기(주소값이 있는 경우 수정가능) ->
+		for(Car c: cars) {
+			c.setCarName("ttt");
+			System.out.println(c.getCarName());
+		}
+		
+		// cars에 저장된 차 중 주행거리가 500을 초과하는 차 출력하기
+		// 주행거리가 500 초과한 차만 저장한 배열 생성하기
+		
+		System.out.println("500을 초과하는 차 출력하기");
+		for(Car c: cars) {
+			if(c.getKm()>500) {
+				System.out.println(c.infoCar());				
+			}
+		}
+		int count = 0;
+		for(Car c: cars) {
+			if(c.getKm()>500) {
+				count++;
+			}
+		}
+//		Car[] car500 = new Car[cars.length];
+		Car[] car500 = new Car[count];		
+		int i = 0;
+		for(Car c: cars) {
+			if(c.getKm()>500) {
+				car500[i++]=c;				
+					System.out.println(c.infoCar());				
+			}
+		}
+		
+		Car[] tempCar;
+//		tempCar = Arrays.stream(cars).filter(c->c.getKm()>500).toArray(Car[]::new);
+//		for(Car c : tempCar) {
+//			System.out.println(c.infoCar());
+//		}
+		// 객체 배열 선언과 동시에 초기화
+		Food[] foods = {new Food(),new Food()};
+		for(Food f: foods) {
+			f.setName("test");
+		}
+//		foods {new Food("짜장면", 9000, "중식"),
+//			   new Food("돈까스", 1200, "양식"),
+//			   new Food("짜글이", 1200, "한식")
+//		};
+	}
+	
+	//과일을 저장할 수 있는 클래스를 만들고
+	//이름, 무게, 색상, 가격
+	//과일을 5개 저장할 수 있는 저장소를 만들자
+	//1. 초기화한 과일들 전체 출력하기
+	//2. 입력된 과일중 무게가 3kg이상인 과일 출력하기
+	//3. 가격이 3000 이상인 과일 출력하기
+	//사과 5 빨강 10000
+	//바나나 3 노랑 8000
+	//딸기 1.5 빨강 2500
+	//키위 2 초록 2800
+	//샤인머스켓 1.3 초록 40000
+	public void fruit() {
+		Fruit[] f = {new Fruit("사과",5,"빨강",10000),
+					 new Fruit("바나나",3,"노랑",8000),
+					 new Fruit("딸기",1.5,"노랑",2500),
+					 new Fruit("키위",2,"노랑",2800),
+					 new Fruit("샤인머스켓",1.3,"노랑",40000)
+		};
+		for(Fruit fruit : f) {
+			//1. 초기화한 과일들 전체 출력하기
+			System.out.println(fruit.infoFruit());
+		}
+//		Arrays.stream(f).forEach(System.out::println);
+		System.out.println("------------------------");
+		
+		//2. 입력된 과일중 무게가 3kg이상인 과일 출력하기
+		for(Fruit fruit : f) {
+			if(fruit.getWeight()>=3) {
+				System.out.println(fruit.infoFruit());
+			}
+		}
+		
+		System.out.println("------------------------");
+		//3. 가격이 3000 이상인 과일 출력하기
+		for(Fruit fruit : f) {
+			if(fruit.getPrice()>=3000) {
+				System.out.println(fruit.infoFruit());
+			}
+		}
+		System.out.println("------------------------");
+
 	}
 }

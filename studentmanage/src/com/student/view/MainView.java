@@ -3,7 +3,6 @@ package com.student.view;
 import java.util.Scanner;
 
 import com.student.controller.StudentController;
-import com.student.model.dao.StudentDao;
 import com.student.model.vo.Student;
 import static com.student.controller.StudentController.getStudentController;
 
@@ -30,7 +29,7 @@ public class MainView {// 3/13
 	public void mainMenu() {
 //		for (;;) 
 		while (true){
-			System.out.println("==== 학생관리 프로그램 v0.1 ====");
+			System.out.println("==== 학생관리 프로그램 v0.2 ====");
 			System.out.println("1. 학생 등록");
 			System.out.println("2. 학생 수정(학년, 반, 전화번호, 주소)");
 			System.out.println("3. 학생 삭제");
@@ -49,7 +48,7 @@ public class MainView {// 3/13
 				getStudentController().insertStudent();
 				break;
 			case 2:
-				getStudentController().updateStudent();
+				getStudentController().updateStudent2();
 				break;
 			case 3:
 				getStudentController().deleteStudent();

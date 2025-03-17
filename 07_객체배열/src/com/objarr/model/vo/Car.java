@@ -6,16 +6,16 @@ public class Car {
 	private String carColor;
 	private int km;
 	private String carName;
-	
+
 	public Car() {
-		
+
 	}
-	
-	public Car(String carType, String carColor,int km,String carName) {
-		this.carType=carType;
-		this.carColor=carColor;
-		this.km=km;
-		this.carName=carName;
+
+	public Car(String carType, String carColor, int km, String carName) {
+		this.carType = carType;
+		this.carColor = carColor;
+		this.km = km;
+		this.carName = carName;
 	}
 
 	public String getCarType() {
@@ -49,5 +49,9 @@ public class Car {
 	public void setCarName(String carName) {
 		this.carName = carName;
 	}
-	
+
+	public String infoCar() {
+		return carType + " " + carColor + " " + km + " " + carName;
+	}
+
 }
