@@ -10,7 +10,7 @@ public class Book {
 	private String category;
 	
 	{
-		book_no = "BOOK_"+bookIndex;
+		book_no = "BOOK_"+bookIndex++;
 	}
 	public Book() {
 		// TODO Auto-generated constructor stub
