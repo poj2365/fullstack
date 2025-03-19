@@ -2,7 +2,9 @@ package com.objarr.controller;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
+import com.objarr.common.FruitFilter;
 import com.objarr.model.vo.Car;
 import com.objarr.model.vo.Food;
 import com.objarr.model.vo.Fruit;
@@ -184,6 +186,8 @@ public class ObjectArrController { // 3/14 객체 배열
 		for(Fruit fruit : f) {
 			if(fruit.getWeight()>=3) {
 				System.out.println(fruit.infoFruit());
+				fruitFilter(fruit, (f,value)->f.getWeight()>=value, 3);
+				fruitFilter2(fruit, (f)->f.getName().length()==2);
 			}
 		}
 		
@@ -195,6 +199,23 @@ public class ObjectArrController { // 3/14 객체 배열
 			}
 		}
 		System.out.println("------------------------");
-
+		
+	}
+	
+	// 03/19
+	public void fruitFilter(Fruit[] fruit, FruitFilter filter, Object value) {
+		for(Fruit f : fruit) {
+			if(filter.checkFruit(f, value)) {
+				System.out.println(f.infoFruit());
+			}
+		}
+	}
+	
+	public void fruitFilter2(Fruit fruit, Predicate<Fruit> filter) {
+		for(Fruit f : fruit) {
+			if(filter.test(f)) {
+				System.out.println(f.infoFruit());
+			}
+		}
 	}
 }

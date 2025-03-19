@@ -7,6 +7,7 @@ import com.inter.common.C_ParentInter;
 import com.inter.common.C_ParentInter2;
 import com.inter.common.FlyAble;
 import com.inter.common.MoveAble;
+import com.inter.common.MyFuntionalInter;
 import com.inter.model.vo.Animal;
 import com.inter.model.vo.C_Chicken;
 import com.inter.model.vo.C_ChildInterImpl;
@@ -72,8 +73,32 @@ public class C_InterController {
 		// FuncationalInterface
 		// 람다표현식으로 처리가 가능
 		fly2(()->{System.out.println("날아보자!");});
+		// (매개변수)->{실행문}  ==> public void OOO(){}
+		// ()->{return 값;} ==> public int OOO(){}
+		// (data)->{} ==> public void OOO(String param){}
+		// ()->10 ==> public int OOO(){}
+		// data->data.length() ==> public int OOO(String data)
 		
+		MyFuntionalInter test = new MyFuntionalInter() {
+			
+			@Override
+			public boolean test(String a) {
+				return a.length()>5;
+			}
+		};
+		test = (msg)->{return msg.charAt(0)=='자';};
+		testString((s)->s.charAt(0)=='t');
+		testString((s)->s.length()>10);
 	}
+	
+	public void testString(MyFuntionalInter func) {
+		if(func.test("test")){ 
+			System.out.println("맞아");
+		}else {
+			System.out.println("아니야");
+		}
+	}
+	
 	
 	public void fly2(FlyAble animal) {
 			animal.fly();

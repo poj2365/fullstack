@@ -48,4 +48,34 @@ public class ControlPractice {
 			System.out.println("홀수다");
 		}
 	}
+	
+	public void practice11() {
+		System.out.println("입력 : ");
+		int a = sc.nextInt();
+		if(a<1000 || 9999<a) {
+			System.out.println("자릿수 안맞음");
+			return;
+		}
+		int[] test = new int[4];
+		test[0]= a/1000;
+		test[1] = (a / 100) % 10;
+		test[2] = (a / 10) % 10;
+		test[3] = a % 10;
+		int cnt =0;
+		for(int i=0;i<test.length;i++) {
+			for(int j=i+1;j<test.length+1;j++) {
+				if(j<5) {
+					if(test[i]==test[j]) {
+						cnt++;
+					}
+				}
+			}
+		}
+		
+		if(cnt==0) {
+			System.out.println("중복값 없음");
+		}else {
+			System.out.println("중복값 없음");
+		}
+	}
 }
