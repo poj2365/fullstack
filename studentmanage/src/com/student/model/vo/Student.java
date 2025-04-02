@@ -1,6 +1,8 @@
 package com.student.model.vo;
 
-public class Student {// 3/13
+import java.io.Serializable;
+
+public class Student implements Serializable{// 3/13
 	private static int studentIndex = 0;
 	private int studentNo;
 	private String studentName;

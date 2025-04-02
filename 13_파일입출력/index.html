@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, ser-scalable=no" name="viewport"/>
+
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- 메타설정    -->
+    <meta name="robots" content="index,java,data,pm"/>
+    <meta name="description" content="2024년 5월 기준 인턴 인턴 전환율 97.7%! 천재IT교육센터에서 전액 국비지원으로 제로에서 100까지, 교육에서 취업까지 함께하세요!">
+    <meta name="keywords"
+          content="국비지원, UXUI, 인공지능, 코딩 부트캠프, 국비지원컴퓨터학원, 국민내일배움카드, 웹개발자, PM, 에듀테크 PM, 마케팅, 풀스택, 풀스택개발자, 직업훈련, 에듀테크 개발자, 프로그래밍, 구로 컴퓨터학원, 프론트엔드, 서비스 기획자, 코딩학원, 콘텐츠 기획자, 백엔드, 백엔드개발자, JAVA, 자바, IT국비지원, 웹개발, pm 직무, 에듀테크, 개발자 취업, IT취업, 프로덕트 매니저, K디지털트레이닝, 프로젝트 매니저, 프로그래머, 천재교육IT, 30대 직업, 부트캠프, 중견기업 인턴, AI교육, pm교육, PM 부트캠프, PM 국비지원">
+
+    <!-- 오픈그래프    -->
+    <meta property="og:type" content="website">
+    <!--    <meta property="og:title" content="천재교육 천재IT교육센터">-->
+    <meta property="og:description"
+          content="2024년 5월 기준 인턴 전환율 97.7%! 천재IT교육센터에서 전액 국비지원으로 제로에서 100까지, 교육에서 취업까지 함께하세요!">
+    <meta property="og:keywords"
+          content="국비지원, UXUI, 인공지능, 코딩 부트캠프, 국비지원컴퓨터학원, 국민내일배움카드, 웹개발자, PM, 에듀테크 PM, 마케팅, 풀스택, 풀스택개발자, 직업훈련, 에듀테크 개발자, 프로그래밍, 구로 컴퓨터학원, 프론트엔드, 서비스 기획자, 코딩학원, 콘텐츠 기획자, 백엔드, 백엔드개발자, JAVA, 자바, IT국비지원, 웹개발, pm 직무, 에듀테크, 개발자 취업, IT취업, 프로덕트 매니저, K디지털트레이닝, 프로젝트 매니저, 프로그래머, 천재교육IT, 30대 직업, 부트캠프, 중견기업 인턴, AI교육, pm교육, PM 부트캠프, PM 국비지원">
+<!--    <meta property="og:url" content="https://www.genia.academy/">-->
+
+    <meta name="google-site-verification" content="pHWSWE0gPZJBsxdx3JLH7ZytZHlFiPDU3a53GOrrhHY"/>
+
+    <link rel="canonical" href="https://www.genia.academy/">
+
+    <!-- 파비콘 설정 -->
+    <!-- 표준 파비콘 -->
+    <link rel="shortcut icon" href="/static/images/common/logo.ico">
+
+    <!-- 애플 계열 모바일 -->
+    <link rel="apple-touch-icon-precomposed" href="/static/images/common/logo.png">
+
+    <!-- IE 계열 브라우저 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/static/images/common/logo48.png">
+
+    <!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
+    <link rel="icon" href="/static/images/common/logo16.png" sizes="16x16">
+    <link rel="icon" href="/static/images/common/logo32.png" sizes="32x32">
+    <link rel="icon" href="/static/images/common/logo48.png" sizes="48x48">
+    <link rel="icon" href="/static/images/common/logo.png" sizes="64x64">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- jQuery Cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <!-- Swiper CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/static/css/global.css"/>
+    <link rel="stylesheet" href="/static/css/chatbot.css">
+
+    <!-- Google Tag Manager -->
+<!--    <script>(function (w, d, s, l, i) {-->
+<!--        w[l] = w[l] || [];-->
+<!--        w[l].push({-->
+<!--            'gtm.start':-->
+<!--                new Date().getTime(), event: 'gtm.js'-->
+<!--        });-->
+<!--        var f = d.getElementsByTagName(s)[0],-->
+<!--            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';-->
+<!--        j.async = true;-->
+<!--        j.src =-->
+<!--            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
+<!--        f.parentNode.insertBefore(j, f);-->
+<!--    })(window, document, 'script', 'dataLayer', 'GTM-5FN22GC5');</script>-->
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PFLTHBXT');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2534505893400273');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=2534505893400273&ev=PageView
+&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2534505893400273');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=2534505893400273&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+    <script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+    window.amplitude.init('7af55f184c9792937aa24353686ace38', {"autocapture": {"elementInteractions": true}});</script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "q3v89wy9lf");
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFLTHBXT"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <meta property="og:title" content="천재IT교육센터 - (주)천재교육이 운영하는 IT 교육센터">
+    <meta property="og:image" content="https://genia.academy/static/images/main/mb-main-top-img-1.png" />
+    
+    <title>천재IT교육센터 - (주)천재교육이 운영하는 IT 교육센터</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FN22GC5"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    <header>
+        <div class="mobile-container">
+            <div class="nav-wrapper" id="nav-wrapper">
+                <a href="/">
+                    <picture>
+                        <source srcset="/static/images/common/chunjae-logo.svg" media="(min-width: 781px)" />
+                        <img src="/static/images/common/mobile-chunjae-logo.svg" alt="천재IT교육센터 모바일 로고"/>
+                    </picture>
+                </a>
+                <button class="mobile-nav-toggle" aria-expanded="false">
+                    <img id="icon-hamburger" src="/static/images/common/icon-hamburger.svg" alt="모바일 토글 열기 로고"/>
+                    <img id="icon-close" src="/static/images/common/icon-close.svg" alt="모바일 토글 닫기 로고"/>
+                </button>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a class="home-page" href="/">홈</a></li>
+                        <li><a class="pm-page" href="/pm">PM</a></li>
+                        <li><a class="java-page" href="/java">풀스택</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        $(".mobile-nav-toggle")
+            .off("click")
+            .on("click", function () {
+                const expended = $('.mobile-nav-toggle').attr('aria-expanded');
+                console.log(expended);
+                if (expended === 'true') {
+                    $('#icon-hamburger').css('display', 'block');
+                    $('#icon-close').css('display', 'none');
+                    $('.mobile-nav-toggle').attr('aria-expanded', 'false');
+                } else {
+                    $('#icon-hamburger').css('display', 'none');
+                    $('#icon-close').css('display', 'block');
+                    $('.mobile-nav-toggle').attr('aria-expanded', 'true');
+                }
+                $(document).find(".header-nav").slideToggle();
+            });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.href.includes('/java')) {
+                $('.java-page').addClass('current-page');
+            } else if (window.location.href.includes('/pm')) {
+                $('.pm-page').addClass('current-page');
+            } else {
+                $('.home-page').addClass('current-page');
+            }
+        });
+    </script>
+
+<!--    <script th:inline="javascript">-->
+<!--        let lastScrollTop = 0;-->
+<!--        const navWrapper = document.getElementById('nav-wrapper');-->
+<!--        const originalHeight = 100;-->
+<!--        const reducedHeight = 60;-->
+
+<!--        function throttle(func, limit) {-->
+<!--            let inThrottle;-->
+<!--            return function() {-->
+<!--                const args = arguments;-->
+<!--                const context = this;-->
+<!--                if (!inThrottle) {-->
+<!--                    func.apply(context, args);-->
+<!--                    inThrottle = true;-->
+<!--                    setTimeout(() => inThrottle = false, limit);-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+
+<!--        const handleScroll = throttle(function() {-->
+<!--            // 화면 너비가 781 이상일 때만 실행-->
+<!--            if (window.innerWidth >= 781) {-->
+<!--                const st = window.pageYOffset || document.documentElement.scrollTop;-->
+
+<!--                if (st > lastScrollTop) {-->
+<!--                    // 아래로 스크롤-->
+<!--                    navWrapper.style.height = `${reducedHeight}px`;-->
+<!--                } else {-->
+<!--                    // 위로 스크롤-->
+<!--                    navWrapper.style.height = `${originalHeight}px`;-->
+<!--                }-->
+
+<!--                lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling-->
+<!--            }-->
+<!--        }, 100); // 100ms마다 한 번만 실행-->
+
+<!--        window.addEventListener('scroll', handleScroll);-->
+<!--    </script>-->
+
+
+    <div>
+    <section>
+        <div class="main-top mobile-container">
+            <div class="mainTopMobileSwiper">
+                <div class="main-top-swiper-wrapper swiper-wrapper">
+                    <a class="swiper-slide main-top-img"
+                       href="https://genia.academy/pm"
+                       target="_blank"
+                       style="background-image: url(&#39;https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/d468bf85.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3599&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=3583a2cdc36074500a450ab633debce7d5d768265fd0abea816a4a562ce5d3c9&#39;);">
+                    </a><a class="swiper-slide main-top-img"
+                       href="https://genia.academy/java"
+                       target="_blank"
+                       style="background-image: url(&#39;https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/3379034e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=8a7cc1a163a2c27573fd260a9bb00dfbc0504510a9ab0b00cc5d49bf60208e36&#39;);">
+                    </a>
+                </div>
+            </div>
+            <div class="mainTopSwiper">
+                <div class="main-banner-swiper-wrapper swiper-wrapper">
+                    <a class="swiper-slide main-banner"
+                       href="https://genia.academy/pm"
+                       target="_blank"
+                       style="background-image: url(&#39;https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/a17f0d69.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=ffd6c4436b462e86592d44724a7550eed7a28cfadc8535891cf56a5c958b6b0c&#39;);">
+                    </a><a class="swiper-slide main-banner"
+                       href="https://genia.academy/java"
+                       target="_blank"
+                       style="background-image: url(&#39;https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/03175862.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=1d4e9b480b59f9b6fbe71493305292e702a290ef7880b1dfeee116b7427df8d6&#39;);">
+                    </a>
+                </div>
+                <div class="main-top-swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-container">
+            <div class="section-title-wrap mt-80px">
+                <h6>NOW ON</h6>
+                <h5>모집중인 과정</h5>
+            </div>
+
+            <div class="course-wrap">
+                <a href="/pm" class="course">
+                    <div class="course-img pm">
+                        <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/b3369851.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3599&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=bf900c7c235651c2a333f2e329c49c9538838a9c69f47a135aa5eaf2aaecd81b" alt="PM과정 모집 이미지" />
+                    </div>
+                    <div class="course-info">
+                        <h6 class="course-title">에듀테크 PM(프로덕트매니저)</h6>
+                        <div class="d-day"></div>
+                        <div class="hashtag-wrap">
+                            <span class="hashtag card">내일배움카드</span>
+                            <span class="hashtag gukbi">국비지원</span>
+                            <span class="hashtag job">취업연계</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/java" class="course">
+                    <div class="course-img fullstack">
+                        <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/df3abca1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=04f174cfddcd2d2e5f0aaf20f79771dbcfc48d29422a52b0706b084cc7e108d2" alt="풀스택과정 모집 이미지" />
+                    </div>
+                    <div class="course-info">
+                        <h6 class="course-title">에듀테크 풀스택(Java) 개발자</h6>
+                        <div class="d-day"></div>
+                        <div class="hashtag-wrap">
+                            <span class="hashtag card">내일배움카드</span>
+                            <span class="hashtag gukbi">국비지원</span>
+                            <span class="hashtag job">취업연계</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-container">
+            <div class="section-title-wrap mt-80px">
+                <h6>REVIEW</h6>
+                <h5>실제 수료생이 들려주는 생생 후기</h5>
+                <p>먼저 수강한 선배들의 솔직한 후기를 확인하세요!</p>
+            </div>
+
+            <div class="mainReviewSwiper">
+                <div class="main-review-swiper-wrapper swiper-wrapper">
+                    <a href="https://blog.naver.com/chunjae2023/223401794045" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-1"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223387343456" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-2"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223426757393" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-3"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223276145212" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-4"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223280063203" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-5"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223276796275" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-6"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223389762175" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-7"></a>
+                    <a href="https://blog.naver.com/chunjae2023/223392081475" target="_blank"
+                       class="swiper-slide main-review-img main-review-img-8"></a>
+                </div>
+                <div class="main-review-swiper-button-next swiper-button-next"></div>
+                <div class="main-review-swiper-button-prev swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-container section-how-to">
+            <div class="section-title-wrap">
+                <h6>HOW TO</h6>
+                <h5>내일배움카드는 어떻게 신청하죠?</h5>
+                <p>고용노동부의 내일배움카드 발급 가이드를 확인하세요</p>
+            </div>
+            <a class="how-to-thumbnail" href="https://youtu.be/JTWgKWo-D4k?feature=shared" target="_blank">
+                <img src="/static/images/main/how-to-thumbnail.png" alt="내일배움카드 발급 유튜브 썸네일">
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="mobile-container">
+            <div class="section-title-wrap">
+                <h6>CONTENTS</h6>
+                <h5>천재IT교육센터의 이야기</h5>
+                <p>영상으로 만나보는 IT교육 이야기</p>
+            </div>
+
+            <div class="content-wrap">
+                <a class="content" href="https://www.youtube.com/watch?v=xKizfyg86y0" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/f4d01df8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=4ab684ef3fc83f66dbfd46cd4744e8c788ca1596a0b4462d04d3ea52c853b86f" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/1ce4f415.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=77fd6f93369792091651cb871fe1e7b53429214858c794e010d389fba4f09891" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>문항반응이론(IRT)을 활용한 컴퓨터 기반 적응형 검사(CAT)의 원리와 응용</h5>
+                        
+                    </div>
+                </a><a class="content" href="https://www.youtube.com/watch?v=Tgbo-lj5YvY" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/fb8c46da.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=dc4de2c3011ccb938e3ba6055113187082a5aabd232644fae4fe7bee61847f17" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/a6f4971d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=2bc4a356b8bdf3d98d0000664743ba93539f62692596a7d07703fcfe28e61d97" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>효율적인 코드 관리와 협업을 위한 깃(Git)의 모든것</h5>
+                        
+                    </div>
+                </a><a class="content" href="https://www.youtube.com/watch?v=4Axf041f5mM&amp;t=1122s" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/2817b177.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=e5dfc06a28d2564130c3a2cc0eb82b2bfe3eb80fa03707b09ca5d499d53faec4" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/a1b21cc2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=6b35dea6de25425dd2da1ea588a1ddc1fb26041b832cb0419dc42fd982ba8c64" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>원데이 파이썬 클래스</h5>
+                        <h6>-OpenPyXL을 이용한 업무 자동화</h6>
+                    </div>
+                </a><a class="content" href="https://www.youtube.com/watch?v=B-14Ksjonvk" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/52f3bc89.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=02895eed63081c97b66a37d22138e3eb887ffcbcb755781e8969d7157c7c910a" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/22d8db7d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=6e2bb294e13a31bd7f9164617cb6edc3b12b0215fc97db3d788d8e0e90b71fb9" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>에듀테크 도메인 역량과 핵심기술 2가지</h5>
+                        <h6>-지식 추적과 학습 추천</h6>
+                    </div>
+                </a><a class="content" href="https://www.youtube.com/watch?v=ztlpv_w-220" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/1c490a40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3599&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=ca0330eae5a284af707744be58f14c006c4d1aeeecac3b2903b1d201d33024a0" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/eb64aceb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=3a579069942cef7f012a002d2dac30aac634f54cf15c241bbb6185a6cc3eccf3" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>더이상 API 쓰면 안되는 이유?</h5>
+                        <h6>-AI 챗봇 개발 프로젝트 실무 사례 기반으로</h6>
+                    </div>
+                </a><a class="content" href="https://www.youtube.com/watch?v=7QZhFUcCBOg&amp;t=1789s" target="_blank">
+                    <div class="content-img">
+                        <picture>
+                            <source srcset="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/a6bc1fcf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3599&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=a5120688cde500f6f8a1993227d48466ab6dc9f11acf991723d18fdd88346865" media="(min-width: 781px)"/>
+                            <img src="https://kdtlms.s3.ap-northeast-2.amazonaws.com/newkdtlanding/88dc7066.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250321T012824Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Credential=AKIAWZMQVI3ZQX4UEYXR%2F20250321%2Fap-northeast-2%2Fs3%2Faws4_request&amp;X-Amz-Signature=59085931479021e6df1afe1867a74776c7084d423f288c50c473f39d028be575" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <h5>사례 기반 RAG 챗봇 최적화 방법 회고</h5>
+                        <h6>-LLM, RAG, LANGCHAIN</h6>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let pmApplyEndDate = "2025-03-25";
+        let javaApplyEndDate = "2025-04-25";
+
+
+        const getDDay = (targetDateStr) => {
+            const timeZone = 'Asia/Seoul';
+
+            // 오늘 날짜 (한국 시간 기준)
+            const today = new Date(new Intl.DateTimeFormat('en-US', {
+                timeZone,
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            }).format(new Date()));
+
+            // 목표 날짜 (YYYY-MM-DD -> Date 객체로 변환)
+            const targetDate = new Date(new Intl.DateTimeFormat('en-US', {
+                timeZone,
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            }).format(new Date(targetDateStr)));
+
+            // D-Day 계산
+            const diffTime = targetDate - today;
+            return diffTime / (1000 * 60 * 60 * 24);
+        }
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // const targetDateStr = "2025-02-24"; // 모집 마감 날짜
+            let targetDateStr = null;
+
+            const courses = document.querySelectorAll(".course-wrap .course");
+
+            courses.forEach(course => {
+                const dDayElement = course.querySelector(".d-day");
+                const href = course.href;
+
+                if (href.includes("/pm")) {
+                    targetDateStr = pmApplyEndDate;
+                } else if (href.includes("/java")) {
+                    targetDateStr = javaApplyEndDate;
+                }
+
+                if (dDayElement) {
+                    const dDay = getDDay(targetDateStr);
+                    if (dDay < 0) {
+                        dDayElement.textContent = `모집마감`;
+                    } else {
+                        dDayElement.textContent = `모집마감 D-${dDay}`;
+                    }
+
+                    if (dDay <= 7) {
+                        dDayElement.classList.add("d-day-red");
+                    } else {
+                        dDayElement.classList.add("d-day-gray");
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const mainTopMobileSwiper = new Swiper(".mainTopMobileSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+        });
+
+        const mainTopSwiper = new Swiper(".mainTopSwiper", {
+            slidesPerView: "auto",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".main-top-swiper-pagination",
+            },
+        });
+
+    

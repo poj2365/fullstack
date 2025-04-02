@@ -1,5 +1,7 @@
 package com.student.view;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.student.controller.StudentController;
@@ -27,7 +29,7 @@ public class MainView {// 3/13
 	// 1. 메뉴 화면 출력
 //	public void mainMenu(StudentController sc) {
 	public void mainMenu() {
-//		for (;;) 
+		// 컨트롤러에서 저장된 파일을 불러오는 메소드 실행
 		while (true){
 			System.out.println("==== 학생관리 프로그램 v0.2 ====");
 			System.out.println("1. 학생 등록");
@@ -42,31 +44,29 @@ public class MainView {// 3/13
 			int choice = SCANNER.nextInt();
 			switch (choice) {
 			case 1:
-//				insertStudentView(); 
-//				new StudentController().insertStudent();
-//				StudentController.getStudentController().insertStudent();
 				getStudentController().insertStudent();
 				break;
 			case 2:
-				getStudentController().updateStudent2();
+				getStudentController().updateStudent();
 				break;
 			case 3:
 				getStudentController().deleteStudent();
 				break;
-			case 4:
-				getStudentController().searchStudent();
+			case 4, 5, 6, 7:
+				getStudentController().searchStudent(choice);
 				break;
-			case 5:
-				getStudentController().searchStudentByNo();
-				break;
-			case 6:
-				getStudentController().searchStudentByGrade();
-				break;
-			case 7:
-				getStudentController().searchStudentByName();
-				break;
+//			case 5:
+//				getStudentController().searchStudentByNo();
+//				break;
+//			case 6:
+//				getStudentController().searchStudentByGrade();
+//				break;
+//			case 7:
+//				getStudentController().searchStudentByName();
+//				break;
 			case 0:
 				System.out.println("프로그램을 종료합니다.");
+				// 자동으로 학생 데이터 저장하는 메소드 실행
 				return;
 			default:
 				System.out.println("잘못입력하셨습니다.");
@@ -76,7 +76,7 @@ public class MainView {// 3/13
 	
 	// 2. 학생정보 등록화면
 	// 학생번호, 이름, 학년, 반, 주소, 전화번호, 성별, 키, 몸무게
-	public Student insertStudentView() {
+	public List<Student> insertStudentView() {
 		System.out.println("===== 학생등록 =====");
 		System.out.print("이름을 입력하세요 : ");
 		String name = SCANNER.next();
@@ -96,18 +96,18 @@ public class MainView {// 3/13
 		System.out.print("몸무게를 입력하세요 : ");
 		double weight = SCANNER.nextDouble();
 		
-		Student inputStudent = new Student();
-		inputStudent.setStudentName(name);
-		inputStudent.setGrade(grade);
-		inputStudent.setClassroom(classroom);
-		inputStudent.setAddress(address);
-		inputStudent.setPhoneNum(phoneNum);
-		inputStudent.setGender(gender);
-		inputStudent.setHeight(height);
-		inputStudent.setWeight(weight);
-		
-		System.out.println(inputStudent.infoStudent());
-		return inputStudent;
+        List<Student> inputStudentList = new ArrayList<>();
+        Student student = new Student();
+        student.setStudentName(name);
+        student.setGrade(grade);
+        student.setClassroom(classroom);
+        student.setAddress(address);
+        student.setPhoneNum(phoneNum);
+        student.setGender(gender);
+        student.setHeight(height);
+        student.setWeight(weight);
+        inputStudentList.add(student);
+		return inputStudentList;
 	}
 	
 	public void printMessage(String msg) {
@@ -116,13 +116,10 @@ public class MainView {// 3/13
 		System.out.println("====================");
 	}
 	
-	public void printStudent(String content) {
+	public void printStudent(List<Student> sd) {
 		System.out.println("===== 알림 메세지 =====");
 		System.out.println("===== 학생조회결과 =====");
-//		System.out.println(sd.getStudentNo()+" "+sd.getStudentName()+" "+sd.getGrade()+" "+sd.getClassroom()+" "+
-//							sd.getAddress()+" "+sd.getPhoneNum()+" "+sd.getGender()+" "+sd.getHeight()+" "+sd.getWeight()
-//							);
-		System.out.println(content);
+		System.out.println(sd.toString());
 		System.out.println("====================");
 	}
 	

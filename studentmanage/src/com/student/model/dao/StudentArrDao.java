@@ -8,7 +8,7 @@ public class StudentArrDao { // 3/13
 //	private Student s, s1, s2;
 	private Student[] s = new Student[3];
 	private Student[] students = new Student[3];
-	
+
 	private StudentArrDao() {
 
 	}
@@ -21,8 +21,17 @@ public class StudentArrDao { // 3/13
 	}
 
 	public boolean saveStudent(Student input) {
+		Student[] chkStu = searchStudent();
+		for (int i = 0; i < chkStu.length; i++) {
+			if (chkStu[i].getStudentName().equals(input.getStudentName())
+					&& chkStu[i].getPhoneNum().equals(input.getPhoneNum())) {
+				System.out.println("중복 학생이 존재합니다.");
+				return false;
+			}
+
+		}
 		for (int i = 0; i < students.length; i++) {
-			if (students[i]==null) {
+			if (students[i] == null) {
 				students[i] = input;
 				return true;
 			}
@@ -30,35 +39,37 @@ public class StudentArrDao { // 3/13
 		return false;
 	}
 
-	public String searchStudent() {
-		String result = "";
+	public Student[] searchStudent() {
+
+		// 버전1
+//		String result = "";
+//		for (Student s : students) {
+//			if (s != null) {
+//				result+= s.infoStudent()+"\n";
+//			}
+//		}
+//		return result;
+		// 만약 반환값이 배열이라면
+		int count = 0;
 		for (Student s : students) {
 			if (s != null) {
-				result+= s.infoStudent()+"\n";
+				count++;
 			}
 		}
-		return result;
-		// 만약 반환값이 배열이라면 
-//		int count = 0;
-//		for(Student s : students) {
-//			if(s!=null) {
-//				count++;
-//			}
-//		}
-//		Student[] resultStudent = new Student[count];
-//		int index = 0;
-//		for(Student s: students) {
-//			if(s!=null) {
-//				resultStudent[count++]=s;
-//			}
-//		}
-//		return resultStudent;
+		Student[] resultStudent = new Student[count];
+		int index = 0;
+		for (Student s : students) {
+			if (s != null) {
+				resultStudent[count++] = s;
+			}
+		}
+		return resultStudent;
 	}
 
 	public String searchStudentByNo(int studentNo) {
 		String result = "";
-		for(Student s: students) {
-			if(s!=null && s.getStudentNo()==studentNo) {
+		for (Student s : students) {
+			if (s != null && s.getStudentNo() == studentNo) {
 //				result += s.infoStudent()+"\n";
 //				break;
 				return s.infoStudent();
@@ -110,22 +121,20 @@ public class StudentArrDao { // 3/13
 		return students;
 	}
 
-
-
 	public String updateStudent(Student studentInfo) {
 		String result = "";
-		for(Student s: students) {
-			if(s!=null && s.getStudentNo() == studentInfo.getStudentNo()) {
+		for (Student s : students) {
+			if (s != null && s.getStudentNo() == studentInfo.getStudentNo()) {
 				s.setGrade(studentInfo.getGrade());
 				s.setClassroom(studentInfo.getClassroom());
 				s.setPhoneNum(studentInfo.getPhoneNum());
-				s.setAddress(studentInfo.getAddress());								
+				s.setAddress(studentInfo.getAddress());
 				result = "회원 수정 성공";
 				return result;
 			}
 		}
 		result = "회원 수정 실패";
-		return result ;
+		return result;
 	}
 
 	public String deleteStudent(Student resultNo) {
@@ -147,7 +156,6 @@ public class StudentArrDao { // 3/13
 		return msg;
 
 	}
-
 
 	private void changeData(Student ori, Student update) {
 		if (update.getGrade() != 0) {
