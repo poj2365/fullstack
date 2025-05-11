@@ -7,8 +7,22 @@
     <title>Blind 클론</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="./submenu.css">
 </head>
+<style>
 
+.page-wrapper {
+  display: flex;
+  gap: 30px; /* 간격 추가 */
+  padding: 20px; /* 페이지 좌우 여백 */
+  justify-content: center; /* 가운데 정렬 */
+  flex-wrap: wrap; /* 모바일 대응 */
+}
+
+    .container {
+      flex: 1;
+    }
+</style>
 <body>
     <!-- 최상단 로그인/회원가입 라인 -->
     <div class="bg-light px-4 py-1 d-flex justify-content-end" style="font-size: 13px;">
@@ -16,7 +30,7 @@
             <span class="badge" style="top: 10%; right: 110%;">999+</span>
             <a href="#" class="me-3 text-decoration-none text-secondary">알림</a>
         </div>
-        <a href="#" class="me-3 text-decoration-none text-secondary">로그인</a>
+        <a href="#" class="me-3 text-decoration-none textP-secondary">로그인</a>
         <a href="#" class="me-3 text-decoration-none text-secondary">회원가입</a>
         <a href="#" class="me-3 text-decoration-none text-secondary">고객센터</a>
     </div>
@@ -83,6 +97,15 @@
         </div>
     </nav>
 
+<div class="page-wrapper">
+                            <!-- 오른쪽 컬럼 -->
+                    <div class="study-menu">
+                    <ul>
+                        <li><a href="./study.html"><strong>스터디</strong></a></li>
+                        <li><a href="./study.html">모집글</a></li>
+                        <li><a href="./study.html">스터디그룹</a></li>
+                    </ul>
+                    </div>
     <!-- 메인 콘텐츠 -->
     <div class="container mt-4">
         <div class="row">
@@ -93,15 +116,15 @@
                     <a href="./study.html">스터디 게시판 </a>
                 </h5>
                 <ul class="list-group">
-                    <a href="./study.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 59%;">모집중</span> [Kotlin + Spring] 코프링 스터디원 모집 <span class="float-end text-muted">77</span></li></a>
-                    <a href="./study.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 41%;">모집중</span> 팀네이버 신입공채 Tech 최종면접 스터디원 모집 (Data 분야) <span class="float-end text-muted">81</span>
+                    <a href="./groupdetail.html">
+                    <li class="list-group-item"><span class="badge bg-secondary" style="top: 30%; right: 59%;">모집완료</span> [Kotlin + Spring] 코프링 스터디원 모집 <span class="float-end text-muted">77</span></li></a>
+                    <a href="./groupdetail.html">
+                    <li class="list-group-item"><span class="badge bg-secondary" style="top: 30%; right: 41%;">모집완료</span> 팀네이버 신입공채 Tech 최종면접 스터디원 모집 (Data 분야) <span class="float-end text-muted">81</span>
                     </li></a>
-                    <a href="./study.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 50%;">모집중</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
+                    <a href="./groupdetail.html">
+                    <li class="list-group-item"><span class="badge bg-secondary" style="top: 30%; right: 50%;">모집완료</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
                     </li></a>
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 50%;">모집중</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
+                    <li class="list-group-item"><span class="badge bg-secondary" style="top: 30%; right: 50%;">모집완료</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
                     </li></a>
                     <li class="list-group-item"><span class="badge" style="top: 30%; right: 50%;">모집중</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
                     </li></a>
@@ -122,7 +145,7 @@
             <p style="text-align: center; margin: 10px; font-size: 18px;">1 2 3 4 5 6 7 8 9</p>
         </div>
     </div>
-
+</div>
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-left">

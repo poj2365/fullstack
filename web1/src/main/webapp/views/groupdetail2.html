@@ -1,16 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blind 클론</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-</head>
+  <title>내 스터디 그룹</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
 
+    
+    .study-menu{
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    text-align: center;
+    }
+
+    .study-menu li{
+    list-style-type: none;
+    padding: 5px 15px;
+    }
+
+    .study-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.study-menu li a:hover {
+    color: #007bff;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .group-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .group-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .group-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .group-info {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .group-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .group-actions button {
+      flex: 1 1 45%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .edit-btn { background-color: #4CAF50; color: white; }
+    .delete-btn { background-color: #e53935; color: white; }
+    .kick-btn { background-color: #ff9800; color: white; }
+    .leave-btn { background-color: #9e9e9e; color: white; }
+    .chat-btn { background-color: #42a5f5; color: white; }
+
+    .group-actions button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
 <body>
-    <header>
+ <header>
     <!-- 최상단 로그인/회원가입 라인 -->
     <div class="bg-light px-4 py-1 d-flex justify-content-end" style="font-size: 13px;">
         <div class="wrapper">
@@ -85,80 +176,66 @@
     </nav>
     </header>
 
-    <!-- 메인 콘텐츠 -->
-    <div class="container mt-4">
-        <div class="row">
-
-            <!-- 왼쪽 컬럼 -->
-            <div class="col-md-8 board-menu">
-                <h5 class="border-bottom pb-2 mb-3">베스트</h5>
-                <ul class="list-group mb-4">
-                    <li class="list-group-item">🏢 요즘 핫한 개발 언어 <span class="float-end text-muted">👍 60 💬 526</span>
-                    </li>
-                    <li class="list-group-item">😕 여드름 도대체 몇살까지 나나요? <span class="float-end text-muted">👍 0 💬
-                            17</span></li>
-                    <li class="list-group-item">📍 명수님이 좋아하는 맛집 추천 <span class="float-end text-muted">👍 0 💬 8</span>
-                    </li>
-                    <!-- 생략 가능 -->
-                </ul>
-
-                <h5 class="border-bottom pb-2 mb-3">뻘뻘팀</h5>
-                <ul class="list-group">
-                    <li class="list-group-item">⭐ 스타우브 베이비웍 <span class="float-end text-muted">77</span></li>
-                    <li class="list-group-item">🎄 조금 많이 이르지만 이거 사놓을까? 미니트리 <span class="float-end text-muted">81</span>
-                    </li>
-                </ul>
-
-                <h5 class="border-bottom pb-2 mt-3 mb-3">
-                    <a href="./study.html">스터디 게시판 </a>
-                </h5>
-                <ul class="list-group">
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 59%;">모집중</span> [Kotlin + Spring] 코프링 스터디원 모집 <span class="float-end text-muted">77</span></li></a>
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 41%;">모집중</span> 팀네이버 신입공채 Tech 최종면접 스터디원 모집 (Data 분야) <span class="float-end text-muted">81</span>
-                    </li></a>
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 50%;">모집중</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
-                    </li></a>
-                </ul>
-            </div>
-
-            <!-- 오른쪽 컬럼 -->
-            <div class="col-md-4">
-                <div class="user-card">
-                    <div class="info">
-                        <span class="welcome-msg"><strong>아이디</strong>님 환영합니다!</span><br>
-                        <span class="welcome-msg"><strong>OO</strong>고등학교</span>
+                <!-- 오른쪽 컬럼 -->
+                    <div class="study-menu">
+                    <ul>
+                        <li><a href="./study.html"><strong>스터디</strong></a></li>
+                        <li><a href="./study.html">모집글</a></li>
+                        <li><a href="./study.html">스터디그룹</a></li>
+                    </ul>
                     </div>
-                    <div class="user-menu">
-                        <div class="wrapper">
-                            <span class="badge">999+</span>
-                            <button class="btn btn-sm btn-outline-secondary ms-3">알림</button>
-                        </div>
-                        <button class="btn btn-sm btn-outline-secondary ms-3">마이페이지</button>
-                        <button class="btn btn-sm btn-outline-secondary ms-3">로그아웃</button>
-                    </div>
-                </div>
-                <h5 class="border-bottom pb-2 mb-3">광고자리</h5>
-                <ol class="list-group list-group-numbered mb-4">
-                    <li class="list-group-item">부산도시가스</li>
-                    <li class="list-group-item">제이시스메디칼</li>
-                    <li class="list-group-item">키다리스튜디오</li>
-                    <li class="list-group-item">스크레인스파이코리아</li>
-                    <li class="list-group-item">가축위생방역지원본부</li>
-                </ol>
+  <h1>내 스터디 그룹</h1>
 
-                <!-- <h5 class="border-bottom pb-2 mb-3">법률·노무 상담</h5>
-        <ul class="list-group">
-          <li class="list-group-item">💬 당근마켓 거래 신고 가능할까?ㅠㅠ <span class="float-end text-muted">307</span></li>
-          <li class="list-group-item">📩 법률상담 부탁드립니다 <span class="float-end text-muted">35</span></li>
-        </ul> -->
-            </div>
+  <div class="group-container">
 
-        </div>
+    <!-- ✅ 그룹 1 (작성자) -->
+    <div class="group-card">
+      <div class="group-title">부산 경제시사 스터디</div>
+      <div class="group-info">
+        장소: 연산동 카페<br>
+        시간: 일요일 5시 ~ 7시<br>
+        인원: 5명
+      </div>
+      <!-- <div class="group-actions">
+        <button class="edit-btn">수정</button>
+        <button class="delete-btn">삭제</button>
+        <button class="kick-btn">그룹원 추방</button>
+        <button class="chat-btn">그룹 채팅</button>
+      </div> -->
     </div>
 
+    <!-- ✅ 그룹 2 (작성자가 아님) -->
+    <div class="group-card">
+      <div class="group-title">웹 개발 스터디</div>
+      <div class="group-info">
+        장소: 서면 스터디룸<br>
+        시간: 토요일 3시 ~ 6시<br>
+        인원: 4명
+      </div>
+      <!-- <div class="group-actions">
+        <button class="leave-btn">탈퇴</button>
+        <button class="chat-btn">그룹 채팅</button>
+      </div> -->
+    </div>
+
+    <!-- ✅ 그룹 3 (작성자) -->
+    <div class="group-card">
+      <div class="group-title">CS 면접 준비 스터디</div>
+      <div class="group-info">
+        장소: 온라인(ZOOM)<br>
+        시간: 평일 저녁 9시<br>
+        인원: 6명
+      </div>
+      <!-- <div class="group-actions">
+        <button class="edit-btn">수정</button>
+        <button class="delete-btn">삭제</button>
+        <button class="kick-btn">그룹원 추방</button>
+        <button class="chat-btn">그룹 채팅</button>
+      </div> -->
+    </div>
+
+  </div>
+  
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-left">
@@ -182,5 +259,4 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
