@@ -34,7 +34,7 @@ public class ManyServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//데이터 가져오기 
-		request.setCharacterEncoding("UTF-8");
+//		request.setCharacterEncoding("UTF-8");
 		
 		//단일값
 		String name=request.getParameter("name");

@@ -34,7 +34,7 @@ public class BasicDataServlet extends HttpServlet {
 		String sampleData = request.getParameter("sample");
 		System.out.println(sampleData);
 		response.setContentType("text/html; charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
+//		response.setCharacterEncoding("UTF-8");
 		PrintWriter pw = response.getWriter();
 		pw.println(sampleData);
 	}
