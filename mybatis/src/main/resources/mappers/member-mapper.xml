@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그에는 반드시 namespace 속성을 설정해야함. namespace 속성은 외부에서 mapper을 지칭하는 
+	명칭 -->
+<mapper namespace="member">
+	<!-- sql 문을 설정 -->
+	<!-- <select>, <insert>, <update>, <delete> -->
+	<!-- sql 문 태그를 선언했을때 반드시 id 속성을 설정해야함 태그의 textNode에는 실행할 SQL문을 작성한다. * 문장 
+		끝에 ;은 작성하지 않는다. -->
+	<insert id="insertMember">
+		INSERT INTO MEMBER
+		VALUES('USER99','USER99','유저9','M',
+		62,'USER99@USER99','01012345678','서울시 금천구','운동,독서,코딩',SYSDATE)
+	</insert>
+
+	<!-- 파라미터 값을 받는 SQL문 설정 parameterType 속성을 이용해서 파라미터값에 대한 자료형을 설정 속성 값 : 
+		패키지명.클래스명 mybatis 타입 별칭, 자체설정한 별칭 sql문에서 parameter 값 사용하기 #{}표현식 이용 #{변수명} 
+		-> 단일 값 #{필드명} -> DTO값 -->
+	<insert id="insertMemberParam" parameterType="java.lang.String">
+		INSERT INTO MEMBER VALUES(#{userId},'USER88','유저8','M',
+		62,'USER88@USER88','01012345678','서울시 금천구','운동,독서,코딩',SYSDATE)
+	</insert>
+
+	<insert id="insertMemberParam2"
+		parameterType="com.mybatis.model.dto.Member">
+		INSERT INTO MEMBER VALUES(#{userId},#{password},'유저8','M',
+		62,'USER88@USER88','01012345678','서울시 금천구','운동,독서,코딩',SYSDATE)
+	</insert>
+
+	<insert id="insertMemberAll" parameterType="map">
+		INSERT INTO MEMBER VALUES(#{userId},#{password},#{userName},#{gender},
+		#{age},#{email},#{phone},#{address},#{hobby},SYSDATE)
+	</insert>
+
+	<!-- select 태그를 선언할때 반환형에 대해 설정해야함 resultType : resultSet의 컬럼명과 필드명이 일치할때 
+		사용 resultMap : resultSet의 컬럼명과 필드명이 일치하지 않을때 사용 resultMap 태그(필드의 컬럼명 연결해주는 
+		기능)을 사용해야함. -->
+	<select id="selectMemberCount" resultType="_int">
+		SELECT COUNT(*) FROM
+		MEMBER
+	</select>
+
+	<!-- resultMap 컬럼명과 필드명이 다를 때 필드의 컬럼명 연결해주는 기능 type : resultType id : -->
+	<resultMap id="memberMap" type="com.mybatis.model.dto.Member">
+		<id column="member_id" property="userId" />
+		<!-- pk값 -->
+		<result column="member_pwd" property="password" />
+		<!-- 일반컬럼매핑 -->
+		<result column="member_name" property="userName" />
+		<result column="enroll_date" property="enrollDate" />
+	</resultMap>
+
+	<select id="searchMember" parameterType="string" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER WHERE MEMBER_ID = #{userId}
+	</select>
+	
+	<select id="searchMemberByName" parameterType="string" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER WHERE MEMBER_NAME LIKE '%'||#{userName}||'%'
+	</select>
+	
+	<select id="selectMemberAll" resultType="map">
+		SELECT * FROM MEMBER
+	</select>
+	
+	<!-- 페이징 처리 RowBounds는 파라미터가 아님 페이징 처리를 도와주는 객체-->
+	<select id="selectMemberAllPage" resultMap="memberMap">
+	<!-- SELECT * FROM (SELECT ROWNUM AS RNUM, M.* FROM (SELECT * FROM MEMBER)M) WHERE RNUM ? BETWEEN ? -->
+	SELECT * FROM MEMBER ORDER BY ENROLL_DATE DESC
+	</select>
+</mapper>
